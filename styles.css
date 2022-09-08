@@ -3,3 +3,132 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  font-family: sans-serif;
+}
+
+/* *******************************
+>>> NAVIGATION SIDE BAR <<<
+******************************* */
+nav {
+  flex: 1 1 30%;
+  height: 100vh;
+  max-width: 220px;
+  background-color: azure;
+  padding: 20px 5px;
+}
+
+a {
+  display: block;
+  padding: 20px 30px;
+  border-top: 1px solid gray;
+  text-decoration: none;
+  color: rgb(63, 67, 68);
+}
+
+a:hover {
+  background-color: rgba(197, 245, 245, 0.904);
+}
+
+a:last-of-type {
+  border-bottom: 1px solid gray;
+}
+
+nav header {
+  text-align: center;
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
+/* *******************************
+>>> MAIN SECTION <<<
+******************************* */
+main {
+  flex: 1 1 70%;
+  height: 100vh;
+  overflow-y: scroll;
+  background-color: rgb(204, 226, 224);
+  max-width: 700px;
+  padding: 20px 30px;
+}
+
+main header {
+  font-weight: bold;
+  font-size: x-large;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-left: 6%;
+  margin-bottom: 10px;
+}
+
+code {
+  margin-left: 8%;
+  background-color: beige;
+  padding: 5px;
+}
+
+ul {
+  margin-left: 15%;
+  margin-top: 10px;
+}
+
+li {
+  padding: 6px 0;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+/* *******************************
+>>> small screens <<<
+******************************* */
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav {
+    flex: 1 1 auto;
+    height: 25vh;
+    width: 100vw;
+    max-width: 1200px;
+    background-color: azure;
+    padding: 10px 5px;
+  }
+
+  nav header {
+    width: 100vw;
+    margin-bottom: 5px;
+  }
+
+  nav .link-group {
+    height: 15vh;
+    width: 100vw;
+    overflow-y: scroll;
+  }
+
+  a {
+    padding: 10px 30px;
+  }
+
+  main {
+    flex: 1 1 auto;
+    height: 85vh;
+    overflow-y: scroll;
+    background-color: rgb(204, 226, 224);
+    max-width: 1200px;
+    width: 100vw;
+    padding: 20px 30px;
+  }
+}
